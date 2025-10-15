@@ -1,0 +1,5 @@
+﻿  student.cpp
+c:\users\matej\desktop\škola\2. semester\izg\cvika\5.lab\student.cpp(78): warning C4838: conversion from 'int' to 'double' requires a narrowing conversion
+c:\users\matej\desktop\škola\2. semester\izg\cvika\5.lab\student.cpp(120): warning C4838: conversion from 'int' to 'double' requires a narrowing conversion
+  izg_lab_04.vcxproj -> C:\Users\matej\Desktop\Škola\2. semester\IZG\Cvika\5.lab\Debug\izg_lab_04.exe
+  izg_lab_04.vcxproj -> C:\Users\matej\Desktop\Škola\2. semester\IZG\Cvika\5.lab\Debug\izg_lab_04.pdb (Full PDB)

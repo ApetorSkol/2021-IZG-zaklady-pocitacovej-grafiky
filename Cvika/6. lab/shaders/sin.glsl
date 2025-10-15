@@ -1,0 +1,36 @@
+#ifdef VERTEX_SHADER
+
+uniform mat4 view = mat4(1.f);
+uniform mat4 proj = mat4(1.f);
+#line 5
+
+out vec2 vCoord;
+void main(){
+
+  //fullscreen quad
+  vec2 verts[]= vec2[](
+    vec2(-1.f,-1.f),
+    vec2(+1.f,-1.f),
+    vec2(-1.f,+1.f),
+    vec2(-1.f,+1.f),
+    vec2(+1.f,-1.f),
+    vec2(+1.f,+1.f)
+  );
+
+  if(gl_VertexID>verts.length())return;
+
+  gl_Position = vec4(verts[gl_VertexID],0.f,1.f);
+  vCoord = verts[gl_VertexID]*.5f+.5f;
+}
+#endif
+
+
+
+#ifdef FRAGMENT_SHADER
+uniform float iTime = 0.f;
+in vec2 vCoord;
+out vec4 fColor;
+void main(){
+  fColor = vec4(abs(sin(vCoord.x*radians(360.f)+iTime)*.1f+.5f-vCoord.y)<0.01f);
+}
+#endif
